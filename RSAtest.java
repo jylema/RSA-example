@@ -25,7 +25,7 @@ public class RSAtest {
 
 		String completedTXT = new String(plainTXT.toByteArray());
 
-		System.out.println("The string as a number is" + plainTXT + "and as a string is" + completedTXT);
+		System.out.println("The string as a number is " + plainTXT + " and as a string is " + completedTXT);
 
 		input.close();
 
