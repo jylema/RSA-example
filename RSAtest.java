@@ -3,7 +3,6 @@
 
 import java.util.Scanner;
 import java.math.BigInteger;
-import java.util.HashMap;
 
 public class RSAtest {
 
@@ -13,19 +12,18 @@ public class RSAtest {
 
 		System.out.println("This is an RSA encryption program. Type the string you want encoded below.");
 
-		// Reads plaintext from string -> byte array -> BigInteger
+		// Reads plaintext from string
+		String plainTXT = new String(input.nextLine());
 
-		BigInteger plainTXT = new BigInteger(input.nextLine().getBytes());
+		// Initializes RSA encryption function
+		RSA crypt = new RSA();
 
-		/*
-		 * RSA crypt = new RSA(); HashMap keys = crypt.encrypt(plainTXT);
-		 * System.out.print("Encrypted code: " + keys.get(code));
-		 * System.out.println("It decrypts to " + crypt.decrypt(keys));
-		 */
+		// Encrypts and prints out the plaintext
+		BigInteger code = crypt.encrypt(plainTXT);
+		System.out.println("Your string is now encrypted as \n" + code);
 
-		String completedTXT = new String(plainTXT.toByteArray());
-
-		System.out.println("The string as a number is " + plainTXT + " and as a string is " + completedTXT);
+		// System.out.println("It can be decrypted back to \n" +
+		// crypt.decrypt(code));
 
 		input.close();
 
