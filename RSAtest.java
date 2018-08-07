@@ -22,8 +22,7 @@ public class RSAtest {
 		BigInteger code = crypt.encrypt(plainTXT);
 		System.out.println("Your string is now encrypted as \n" + code);
 
-		// System.out.println("It can be decrypted back to \n" +
-		// crypt.decrypt(code));
+		 System.out.println("It can be decrypted back to \n" + crypt.decrypt(code));
 
 		input.close();
 
