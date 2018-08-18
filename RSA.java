@@ -65,4 +65,14 @@ public class RSA {
 		return new String(txt.toByteArray());
 	}
 
+	public BigInteger getPublicKeyModulus() {
+
+		return modulus;
+	}
+
+	public BigInteger getPublicKeyExponent() {
+
+		return e;
+	}
+
 }
